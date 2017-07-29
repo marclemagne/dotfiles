@@ -13,8 +13,8 @@ export HISTIGNORE='pwd:ls:ls -l:ls -al:cd:cd /:cd ..:cd ~:exit:dcu:dcd:dcl'
 ## GIT ##
 
 if [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh ]; then
-    . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
-    . /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+  . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
+  . /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 fi
 
 GIT_PS1_SHOWDIRTYSTATE=true
