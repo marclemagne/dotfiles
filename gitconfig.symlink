@@ -1,0 +1,15 @@
+[include]
+  path = ~/.gitconfig.local
+[credential]
+  helper = osxkeychain
+[alias]
+  count = !git shortlog -sn
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
+[core]
+  excludesfile = ~/.gitignore
+[apply]
+  whitespace = nowarn
