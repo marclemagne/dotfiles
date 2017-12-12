@@ -1,78 +1,67 @@
-# Installation
+# Setting up a new workstation
 
-These installation steps are pretty biased towards my work situation. There are a number of useful links included in this repository for things like shell scripting and setting up SSH keys.
+This guide is completely biased towards my own preferences and is intended for
+setting up a new macOS workstation. Installation relies on a number of bash
+scripts.
 
-- Go into the App Store and install all updates
+## Before installation
 
-- Install the Command Line Tools:
+The first thing that should be done after a new installation of macOS is to
+check for and install all updates. You can either do this from the Mac App Store
+or from the terminal by running: `sudo softwareupdate -irv`
 
-```
-$ xcode-select --install
-```
+You will probably have to restart your computer after this. Maybe a few times!
 
-- Install NVM (Node Version Manager). This is just a sample command. Go to https://github.com/creationix/nvm#install-script to find the latest version.
+## Bootstrap (almost) all of the things!
 
-```
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
-```
+Run the bootstrap script: `./script/bootstrap.sh`
 
-- Clone and install dotfiles. Be sure to edit `bash_profile.symlink` to reference the correct "DOTFILES" export directory.
+## Finish setting up workstation
 
-```
-$ ./dotfiles.sh install
-```
+Add additional desktops to Spaces and then enable keyboard shortcuts for
+accessing them in: System Prefernces > Keyboard / Shortcuts
 
-- Setup SSH keys
+Update some miscellaneous system preferences (that couldn't be automated):
+- Set "Recent items" to "none" in General
+- Set "Delay Until Repeat" to "Short" in Keyboard
+- Update modifier keys so that "Caps Lock" doubles for "Control" in Keyboard
 
-- Add SSH key to Github (hint: use new "pubkey" alias)
+Add SSH keys/configuration:
+https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 
-- Add SSH key to Bitbucket (hint: use new "pubkey" alias)
+Add SSH key to GitHub (use new "pubkey" alias to copy it to your clipboard):
+https://github.com/settings/keys
 
-- Create project directory
+### Software preferences
 
-```
-$ cd ~ && mkdir Project
-```
+These are pretty solidly relevant only to me, but it's part of how I set up a
+new workstation.
 
-- Install Homebrew
+#### Dropbox
 
-```
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+Open Dropbox, log in, and sync files. This could take a few minutes. You'll
+probably need to get your Dropbox password from 1Password somewhere.
 
-- Install AWS Command Line Interface
+#### 1Password
 
-```
-$ brew install awscli
-```
+Open 1Password and sync with Dropbox.
 
-To configure, enter:
+#### Alfred
 
-```
-$ aws configure
-```
+Open the Alfred preferences and activate the Powerpack. This license is in
+1Password.
 
-Enter the following at the prompts:
+Disable “Show Spotlight search” keyboard shortcut at System Preferences >
+Keyboard > Shortcuts / Spotlight.
 
-```
-AWS Access Key ID [None]: <KEY>
-AWS Secret Access Key [None]: <SECRET>
-Default region name [None]: us-east-1
-Default output format [None]: table
-```
+Then sync with Dropbox. Themes and some settings are not synced so we need to
+manually check the following:
 
-[Optional] Install "shellcheck" via Homebrew to lint/find bugs in shell scripts
+Set cmd-Space (replacing Spotlight search) as the "Alfred Hotkey"; then in the
+"Appearance" tab select the "Alfred macOS" theme; then click "Options" and make
+sure "Hide hat on Alfred window" and "Hide menu bar icon" are checked.
 
-```
-brew install shellcheck
-```
+### What else?
 
-- Install Docker (https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac) and log into JFrog
-
-```
-$ docker login fieldlens-docker-dev-local.jfrog.io
-```
-
-## Inspiration
-
-- https://github.com/holman/dotfiles
+Other software, settings, preferences will need to be configured. This can all
+be done as needed.

@@ -1,5 +1,4 @@
-## DOTFILES ##
-export DOTFILES=$HOME/Project/dotfiles
+# ^ DOTFILES export will be added above when the bootstrap script is executed
 
 ## SHELL/BASH ##
 
@@ -12,6 +11,8 @@ export HISTIGNORE='pwd:ls:ls -l:ls -al:cd:cd /:cd ..:cd ~:exit:dcu:dcd:dcl'
 
 ## GIT ##
 
+alias leaderboard='git shortlog -sn'
+
 if [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh ]; then
   . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
   . /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
@@ -20,9 +21,8 @@ fi
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWCOLORHINTS=true
 export PS1='[\u@mbp \w\[\e[0;36m\]$(__git_ps1)\[\e[0m\]]\$ '
-alias leaderboard='git shortlog -sn'
 
-## ALIAS ##
+## FILESYSTEM ##
 
 alias rm='rm -i'
 alias mv='mv -i'
@@ -48,4 +48,4 @@ alias dcl='docker-compose logs -f'
 
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias localip='get-local-ip.sh'
-alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '› Public key copied to pasteboard.'"

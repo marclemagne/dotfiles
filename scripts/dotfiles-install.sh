@@ -1,16 +1,18 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-GREEN='\033[0;32m'
-NC='\033[0m' # No Color
+GREEN=$(tput setaf 2)
+NC=$(tput sgr0) # No color
 
 usage() {
-  echo "Use this script to install/uninstall custom dotfiles"
-  echo ""
-  echo "To install:"
-  echo "$ ${GREEN}./dotfiles.sh install${NC}"
-  echo ""
-  echo "To uninstall:"
-  echo "$ ${GREEN}./dotfiles.sh uninstall${NC}"
+  cat << EOL
+Use this script to install/uninstall custom dotfiles
+
+To install:
+$ ./dotfiles.sh install
+
+To uninstall:
+$ ./dotfiles.sh uninstall
+EOL
 }
 
 getLink() {
@@ -20,7 +22,7 @@ getLink() {
 }
 
 install() {
-  for dotfile in $(pwd)/*.symlink
+  for dotfile in $(pwd)/../*.symlink
   do
     link=$(getLink "$dotfile")
     ln -sf "$dotfile" "$link"
@@ -29,7 +31,7 @@ install() {
 }
 
 uninstall() {
-  for dotfile in $(pwd)/*.symlink
+  for dotfile in $(pwd)/../*.symlink
   do
     link=$(getLink "$dotfile")
     unlink "$link"

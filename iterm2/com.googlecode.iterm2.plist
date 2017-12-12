@@ -64,14 +64,10 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
-	<key>NSWindow Frame SUStatusFrame</key>
-	<string>634 1028 400 129 0 0 2560 1417 </string>
-	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>970 779 620 392 0 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>350 472 796 473 0 0 1680 1027 </string>
+	<string>132 229 796 473 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1507 451 1025 877 -1680 390 1680 1027 </string>
+	<string>7 46 1025 731 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1226,6 +1222,8 @@
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
+			<key>Minimum Contrast</key>
+			<real>0.16334553006329114</real>
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
@@ -2606,26 +2604,14 @@
 			<string>/Users/mnewman/Project/weos-source-api</string>
 		</dict>
 	</array>
-	<key>NoSyncHaveUsedCopyMode</key>
-	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>51146428-9FD5-40E7-93AD-5024807A597F</string>
-	<key>NoSyncLastTipTime</key>
-	<real>522448360.329467</real>
+	<string>FB380A47-C618-43B0-B8C1-63AAA348FDFC</string>
 	<key>NoSyncPermissionToShowTip</key>
-	<true/>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>522259790.69140399</real>
-	<key>NoSyncTipsDisabled</key>
-	<true/>
-	<key>NoSyncTipsToNotShow</key>
-	<array>
-		<string>000</string>
-		<string>0000</string>
-		<string>000</string>
-	</array>
+	<real>533892345.856408</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>PointerActions</key>
@@ -2662,7 +2648,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/mnewman/Project/dotfiles/iterm2</string>
+	<string>/Users/marc/Project/dotfiles/iterm2</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -2672,11 +2658,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=75</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=97</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-12-01T21:40:55Z</date>
+	<date>2017-12-07T03:37:49Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SmartPlacement</key>
