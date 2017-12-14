@@ -61,6 +61,27 @@ Set cmd-Space (replacing Spotlight search) as the "Alfred Hotkey"; then in the
 "Appearance" tab select the "Alfred macOS" theme; then click "Options" and make
 sure "Hide hat on Alfred window" and "Hide menu bar icon" are checked.
 
+#### Visual Studio Code
+
+Open Visual Studio Code and install the Settings Sync by Shan Khan.
+
+You will need to access your "Personal access token" and Gist identifier from
+1Password.  Look under "Visual Studio Code - Settings Sync".
+
+Once installed run:
+- Sync: Download Settings
+- Sync: Advanced Options / Sync: Toggle Auto-Upload On Settings Change
+- Sync: Advanced Options / Sync: Toggle Auto-Download on Startup
+
+Once this is done restart the application.
+
+Next install Fira Code font (or the font situation here is going to be
+unpleasant):
+- Download (and extract) from: https://github.com/tonsky/FiraCode
+- Install by opening Font Book and clicking the "+" button
+
+Once installed Code should look right.
+
 ### What else?
 
 Other software, settings, preferences will need to be configured. This can all
