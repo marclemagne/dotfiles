@@ -8,7 +8,7 @@ NC=$(tput sgr0) # No color
 
 dotfiles="$(dirname "$(pwd)")"
 
-echo "${GREEN}› Updating ${BLUE}bash_profile.symlink${GREEN} to add DOTFILES export referencing ${BLUE}$dotfiles${NC}"
+echo "${GREEN}› Updating ${BLUE}dotfiles.local.symlink${GREEN} to add DOTFILES export referencing ${BLUE}$dotfiles${NC}"
 echo "\$DOTFILES/bin will be added to your \$PATH allowing for scripts to be executed"
 
-echo "export DOTFILES=$dotfiles" | cat - ../bash_profile.symlink > temp && mv temp ../bash_profile.symlink
+echo "export DOTFILES=$dotfiles" > ../dotfiles.local.symlink

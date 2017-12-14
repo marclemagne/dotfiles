@@ -1,4 +1,8 @@
-# ^ DOTFILES export will be added above when the bootstrap script is executed
+## DOTFILES ##
+
+if [ -f ~/.dotfiles.local ]; then
+  source ~/.dotfiles.local
+fi
 
 ## SHELL/BASH ##
 
