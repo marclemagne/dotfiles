@@ -10,6 +10,7 @@ brew "mas"
 brew "nvm"
 brew "shellcheck"
 brew "tig"
+brew "watchman"
 brew "yarn", args: ["without-node"]
 
 cask "1password"
