@@ -8,10 +8,10 @@ if test ! "$(which brew)"; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
   echo "Updating Homebrew"
-  brew update
+  ../brew update
 
   echo "Installing Homebrew packages"
-  brew bundle
+  ../brew bundle
 else
   exit 1
 fi
