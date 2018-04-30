@@ -36,11 +36,15 @@ alias mkdir='mkdir -p'
 
 alias npm-global='npm ls -g --depth 0'
 
-## NVM ###
+## NVM ##
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+## AUTOJUMP ##
+
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 ## DOCKER ##
 
@@ -53,3 +57,10 @@ alias dcl='docker-compose logs -f'
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias localip='get-local-ip.sh'
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '› Public key copied to pasteboard.'"
+
+## HELPER FUNCTIONS ##
+
+freeport() {
+  port=${1:-8000}
+  lsof -ti:"$port" | xargs kill | echo "› Port $port freed"
+}

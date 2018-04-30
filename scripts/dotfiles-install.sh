@@ -31,7 +31,7 @@ install() {
 }
 
 uninstall() {
-  for dotfile in $(pwd)/../*.symlink
+  for dotfile in "$DOTFILES/*.symlink"
   do
     link=$(getLink "$dotfile")
     unlink "$link"

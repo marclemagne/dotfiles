@@ -1,4 +1,4 @@
-j# Setting up a new workstation
+# Setting up a new workstation
 
 This guide is completely biased towards my own preferences and is intended for
 setting up a new macOS workstation. Installation relies on a number of bash
@@ -14,7 +14,7 @@ You will probably have to restart your computer after this. Maybe a few times!
 
 ## Bootstrap (almost) all of the things!
 
-Run the bootstrap script: `./script/bootstrap.sh`
+Run the bootstrap script: `./scripts/bootstrap.sh`
 
 ## Finish setting up workstation
 
