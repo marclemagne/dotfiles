@@ -22,7 +22,7 @@ getLink() {
 }
 
 install() {
-  for dotfile in $(pwd)/../*.symlink
+  for dotfile in ./*.symlink
   do
     link=$(getLink "$dotfile")
     ln -sf "$dotfile" "$link"
@@ -31,7 +31,7 @@ install() {
 }
 
 uninstall() {
-  for dotfile in "$DOTFILES/*.symlink"
+  for dotfile in ./*.symlink
   do
     link=$(getLink "$dotfile")
     unlink "$link"

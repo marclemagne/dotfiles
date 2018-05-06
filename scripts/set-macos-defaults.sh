@@ -2,6 +2,10 @@
 
 set -e
 
+ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
+# shellcheck disable=SC1090
+source "${ROOT_DIR}/utils.sh"
+
 # Defaults to list view in Finder
 defaults write com.apple.finder FXPreferredViewStyle Nlsv
 
@@ -21,7 +25,7 @@ defaults write NSGlobalDomain KeyRepeat -int 2
 # Sets "Use F1, F2, etc. keys as standard function keys"
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 
-echo "You need to restart your system in order for these changes to take effect."
+logger info "You need to restart your system in order for these changes to take effect."
 
 read -r -p "Would you like to restart now? [y/N] " prompt
 

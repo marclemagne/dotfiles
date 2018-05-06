@@ -17,7 +17,7 @@ do
 done
 
 # Writes credentials
-cat >../aws.symfolder/credentials << EOL
+cat > ./aws.symlink/credentials << EOL
 [default]
 aws_access_key_id=${aws_access_key_id}
 aws_secret_access_key=${aws_secret_access_key}
@@ -45,7 +45,7 @@ do
 done
 
 # Writes config
-cat >../aws.symfolder/config << EOL
+cat > ./aws.symlink/config << EOL
 [default]
 region=${region}
 output=${output}

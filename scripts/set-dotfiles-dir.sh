@@ -2,13 +2,15 @@
 
 set -e
 
-BLUE=$(tput setaf 4)
-GREEN=$(tput setaf 2)
-NC=$(tput sgr0) # No color
+ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
+# shellcheck disable=SC1090
+source "${ROOT_DIR}/utils.sh"
 
-dotfiles="$(dirname "$(pwd)")"
+DOTFILES_DIR="$(pwd)"
 
-echo "${GREEN}› Updating ${BLUE}dotfiles.local.symlink${GREEN} to add DOTFILES export referencing ${BLUE}$dotfiles${NC}"
-echo "\$DOTFILES/bin will be added to your \$PATH allowing for scripts to be executed"
+logger "Creating new file: dotfiles.dir.symlink"
+logger info "This exports DOTFILES_DIR as an environmental variable referencing:"
+logger hl "$DOTFILES_DIR"
+logger info "This is added to the PATH envornmental variable allowing for scripts to be run from the bin directory"
 
-echo "export DOTFILES=$dotfiles" > ../dotfiles.local.symlink
+echo "export DOTFILES=$DOTFILES_DIR" > ./dotfiles.local.symlink

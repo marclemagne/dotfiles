@@ -6,7 +6,7 @@ set -e
 id_name=$(id -F)
 
 # Gets name from prompt
-read -r -p "What is your name? [$id_name]" name
+read -r -p "What is your name? [$id_name] " name
 
 # Defaults to id name if no alternative name was provided from promp
 name=${name:-$id_name}
@@ -18,7 +18,7 @@ do
 done
 
 # Writes file
-cat >../gitconfig.local.symlink << EOL
+cat > ./gitconfig.local.symlink << EOL
 [user]
   name = ${name}
   email = ${email}

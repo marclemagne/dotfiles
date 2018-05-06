@@ -12,6 +12,12 @@ or from the terminal by running: `sudo softwareupdate -ir --verbose`
 
 You will probably have to restart your computer after this. Maybe a few times!
 
+## Install Command Line Tools
+
+Install Command Line Tools in order to get access to git and other utilities
+
+Run: `xcode-select --install`
+
 ## Bootstrap (almost) all of the things!
 
 Run the bootstrap script: `./scripts/bootstrap.sh`
