@@ -57,7 +57,6 @@ alias dcl='docker-compose logs -f'
 ## MISCELLANEOUS ##
 
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
-alias localip='get-local-ip.sh'
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '› Public key copied to pasteboard.'"
 
 ## HELPER FUNCTIONS ##
@@ -65,4 +64,13 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '› Public key copied to p
 freeport() {
   port=${1:-8000}
   lsof -ti:"$port" | xargs kill | echo "› Port $port freed"
+}
+
+localip() {
+  ifcounts=$(ipconfig ifcount)
+
+  for i in $(seq 0 "$ifcounts")
+  do
+    ipconfig getifaddr "en$i"
+  done
 }
