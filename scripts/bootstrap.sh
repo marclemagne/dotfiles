@@ -19,9 +19,10 @@ logger info "If you need to make any changes later, see:"
 logger hl "$HOME/.gitconfig.local"
 "${ROOT_DIR}/setup-gitconfig.sh"
 
-# # Sets up AWS credentials and config
+# Sets up AWS credentials and config
 logger "› AWS credentials and config"
-if confirm "Do you want to setup the default AWS credentials and config now?"; then
+if confirm "Do you want to setup the default AWS credentials and config now?"
+then
   "${ROOT_DIR}/setup-aws.sh"
 else
   logger info "This can be done later by running:"
@@ -36,6 +37,16 @@ logger "› Installing dotfiles"
 logger "› Installing Homebrew and adding packages"
 logger info "You may be asked to log into the Mac App Store"
 "${ROOT_DIR}/homebrew-install.sh"
+
+# Node Version Manager
+logger "› Node Version Manager"
+if confirm "Do you want to install Node Version Manager?"
+then
+  "${ROOT_DIR}/nvm-install.sh"
+else
+  logger info "This can be done later by running:"
+  logger hl "./scripts/nvm-install.sh"
+fi
 
 # Sets up macOS defaults
 # NOTE: This should be last since it will ask to restart the system

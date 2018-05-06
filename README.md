@@ -8,15 +8,16 @@ scripts.
 
 The first thing that should be done after a new installation of macOS is to
 check for and install all updates. You can either do this from the Mac App Store
-or from the terminal by running: `sudo softwareupdate -ir --verbose`
+or from the terminal by running:
+
+`sudo softwareupdate -ir --verbose`
 
 You will probably have to restart your computer after this. Maybe a few times!
 
-## Install Command Line Tools
+Install macOS Command Line Tools in order to get access to git and other
+utilities:
 
-Install Command Line Tools in order to get access to git and other utilities
-
-Run: `xcode-select --install`
+`xcode-select --install`
 
 ## Bootstrap (almost) all of the things!
 

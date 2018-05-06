@@ -13,4 +13,4 @@ logger info "This exports DOTFILES_DIR as an environmental variable referencing:
 logger hl "$DOTFILES_DIR"
 logger info "This is added to the PATH envornmental variable allowing for scripts to be run from the bin directory"
 
-echo "export DOTFILES=$DOTFILES_DIR" > ./dotfiles.local.symlink
+echo "export DOTFILES_DIR=$DOTFILES_DIR" > ./dotfiles.local.symlink

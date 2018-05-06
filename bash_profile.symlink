@@ -7,7 +7,7 @@ fi
 ## SHELL/BASH ##
 
 export CLICOLOR=1
-export PATH=$PATH:$DOTFILES/bin
+export PATH=$PATH:$DOTFILES_DIR/bin
 export EDITOR=vim
 export HISTTIMEFORMAT="%h %d %H:%M:%S $ "
 export HISTCONTROL=ignoreboth
@@ -21,6 +21,8 @@ if [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh ]; 
   . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
   . /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 fi
+
+## GIT PROMPT ##
 
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWCOLORHINTS=true
