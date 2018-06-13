@@ -72,6 +72,8 @@ sure `Hide hat on Alfred window` and `Hide menu bar icon` are checked.
 
 Open Visual Studio Code and install the Settings Sync extension by Shan Khan.
 
+`code --install-extension shan.code-settings-sync`
+
 You will need to access your `Personal access token` and Gist identifier from
 1Password.  Look under "Visual Studio Code - Settings Sync".
 
