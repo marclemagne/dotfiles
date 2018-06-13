@@ -84,12 +84,9 @@ Once installed run:
 
 Once this is done restart the application.
 
-Next install Fira Code font (or the font situation here is going to be
-unpleasant):
-- Download (and extract) from: https://github.com/tonsky/FiraCode
-- Install by opening Font Book and clicking the `+` button
-
-Once installed Code should look right.
+NOTE: Settings Sync is configured to use Operator Mono which needs to be installed
+from Dropbox. Otherwise, use Fira Code which should already be installed through
+the bootstrap script.
 
 ### What else?
 
